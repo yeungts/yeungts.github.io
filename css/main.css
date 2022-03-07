@@ -1,0 +1,27 @@
+.header_links > a {
+    text-decoration: none;
+}
+
+.name_logo {
+    font-family: 'road rage';
+    font-size: 40px;
+};
+
+.about_paragraphs {
+    font-family: 'arcade';
+}
+
+@font-face {
+    font-family: 'road rage';
+    src: url("../fonts/Roadrage-owgBd.otf");
+};
+
+@font-face {
+    font-family: 'cyber throne';
+    src: url("../fonts/Cyberthrone-7nP4.ttf");
+};
+
+@font-face {
+    font-family: 'arcade';
+    src: url("../fonts/PressStart2P-vaV7.ttf");
+};
