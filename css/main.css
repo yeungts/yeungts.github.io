@@ -2,6 +2,14 @@ html, body {
     height: 100%;
 }
 
+body#index_body {
+    background-color: #200D3A;
+    margin: 0;
+    background-image: url("../img/landing_background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body {
     background-color: #200D3A;
     color: #CE5E82;
@@ -13,14 +21,14 @@ body {
 
 body a {
     text-decoration: none;
-    color: #CE5E82;
-    text-shadow: 1px 1px #FF0000;
+    color: #ec8a09;
+    text-shadow: 1.5px 1.5px #6200ff;
 }
 
 body a:hover {
     text-decoration: none;
-    color: #ec8a09;
-    text-shadow: 1px 1px #6200ff;
+    color: #CE5E82;
+    text-shadow: 1.5px 1.5px #FF0000;
 }
 
 div.wrapper {
@@ -45,17 +53,22 @@ div.header_links {
 div.header_links a {
     text-decoration: none;
     color: #ec8a09;
-    text-shadow: 1px 1px #6200ff;
+    text-shadow: 1.5px 1.5px #6200ff;
 }
 
 div.header_links a:hover {
     color: #CE5E82;
-    text-shadow: 1px 1px #FF0000;
+    text-shadow: 1.5px 1.5px #FF0000;
 }
 
-div.name_logo a {
+.name_logo {
     font-family: road-rage;
     font-size: 40px;
+}
+
+#index_body .name_logo {
+    color: #8d1af8;
+    text-shadow: 4px 4px #ff9900;
 }
 
 div.other_links {

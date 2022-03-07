@@ -7,42 +7,40 @@
         <meta name="description" content="Fresh grad looking for jobs ty" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
     </head>
-    <body>
+    <body id="index_body">
         <div class="wrapper">
-            <div class="header_links">
-                <div class="name_logo">
-                    <a href="/">Kendrick Yeung</a>
-                </div>
-                    
-                <div class="other_links">
-                    <a id="vol_changer" href="#" onClick="changeVolume()" ></a>
-                    <a href="aboutme.html">About_Me</a>
-                    <a href="/Resume_Kendrick_Yeung.pdf" target="_blank">Resume</a>
-                    <a href="https://github.com/yeungts" target="_blank">Github</a>
-                    <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
-                </div>
+            <div class="name_logo flexitem">
+                    <h1>Kendrick Yeung</h1>
             </div>
-
             
-            <div id="main_welcome" class="flexitem">
-                <p>Hey! It's Kendrick here!</p>
-                <p>Thanks for dropping by!</p>
-                <p>Enjoy your stay!</p>
-            </div>
-
             <div class="flexitem">
-
+                <div id="main_welcome">
+                    <a id="enter_btn_blink" href="main.html" style="font-size: 60px;">Enter!</a>
+                    <!-- <a id="enter_btn_static" href="main.html" style="font-size: 60px; display: none;">Enter!</a> -->
+                </div>
             </div>
-            <audio id="background_audio" hidden autoplay loop>
-                <source src="audio/background.ogg" type="audio/ogg">
-            </audio>
         </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var isMouseOnEnter = false;
+        setInterval(function() {
+            if (!isMouseOnEnter) {
+                $("#enter_btn_blink").fadeOut(500).fadeIn(500);
+            }
+        }, 1000);
+
+        $(document).ready(function(){
+            $(document).mousemove(function(){
+                $("#main_welcome:hover").length != 0 ? isMouseOnEnter = true : isMouseOnEnter = false;
+            })
+        });
+        </script>
     <!-- 
         TODO: #1 Remember to credit background video and music
-        https://www.youtube.com/watch?v=9Q9TwlME5fk
-        https://www.rennerflorian.de/wp/project/retrowave
+        https://www.youtube.com/watch?v=EPchcBkhRj0 - landing page background
+        https://www.youtube.com/watch?v=9Q9TwlME5fk - background music
+        https://www.rennerflorian.de/wp/project/retrowave main background
      -->
 </html>

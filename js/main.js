@@ -3,16 +3,17 @@ var background_audio = document.getElementById("background_audio");
 var vol_changer = document.getElementById("vol_changer");
 
 
-
-if (getCookie("volume") == "") {
-    background_audio.volume = 0.25;
-    vol_changer.innerHTML = "Vol(25%)";
-    document.cookie = "volume=0.25";
-} else {
-    var volume = parseFloat(getCookie("volume"));
-    console.log(volume);
-    background_audio.volume = volume;
-    vol_changer.innerHTML = "Vol(" + (volume*100) + "%)";
+if (background_audio != null) {
+    if (getCookie("volume") == "") {
+        background_audio.volume = 0.25;
+        vol_changer.innerHTML = "Vol(25%)";
+        document.cookie = "volume=0.25";
+    } else {
+        var volume = parseFloat(getCookie("volume"));
+        console.log(volume);
+        background_audio.volume = volume;
+        vol_changer.innerHTML = "Vol(" + (volume*100) + "%)";
+    }
 }
 
 
