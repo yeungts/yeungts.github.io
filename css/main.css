@@ -1,27 +1,118 @@
-.header_links > a {
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #200D3A;
+    color: #CE5E82;
+    margin: 0;
+    background-image: url("../img/index_background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body a {
     text-decoration: none;
+    color: #CE5E82;
+    text-shadow: 1px 1px #FF0000;
 }
 
-.name_logo {
-    font-family: 'road rage';
+body a:hover {
+    text-decoration: none;
+    color: #ec8a09;
+    text-shadow: 1px 1px #6200ff;
+}
+
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.flexitem {
+  flex-basis: 100%;
+}
+
+div.header_links {
+    display: flex;
+    min-height: 200px;
+    padding: 20px 30px 0px 30px;
+}
+
+div.header_links a {
+    text-decoration: none;
+    color: #ec8a09;
+    text-shadow: 1px 1px #6200ff;
+}
+
+div.header_links a:hover {
+    color: #CE5E82;
+    text-shadow: 1px 1px #FF0000;
+}
+
+div.name_logo a {
+    font-family: road-rage;
     font-size: 40px;
-};
+}
 
-.about_paragraphs {
-    font-family: 'arcade';
+div.other_links {
+    font-family: arcade;
+    display: flex;
+    column-gap: 1em;
+    margin-left: auto;
+    padding-top: 35px;
+}
+
+
+#main_welcome {
+    font-family: connection;
+    color: #e77e1b;
+    text-shadow: 0px 0px 15px rgba(233, 247, 33, 0.664);
+    font-size: 48px;
+    word-spacing: 6px;
+}
+
+h1.content_title {
+    font-family: neon-glow;
+    color: #e77e1b;
+    text-shadow: 0px 0px 15px rgba(233, 247, 33, 0.664);
+}
+
+div.about_me {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper > .about_me > p {
+    font-family: arcade;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#projects p {
+    font-family: connection;
+    word-spacing: 4px;
 }
 
 @font-face {
-    font-family: 'road rage';
+    font-family: road-rage;
     src: url("../fonts/Roadrage-owgBd.otf");
-};
+}
 
 @font-face {
-    font-family: 'cyber throne';
-    src: url("../fonts/Cyberthrone-7nP4.ttf");
-};
+    font-family: connection;
+    src: url("../fonts/ConnectionIii-Rj3W.otf");
+}
 
 @font-face {
-    font-family: 'arcade';
-    src: url("../fonts/PressStart2P-vaV7.ttf");
-};
+    font-family: arcade;
+    src: url("../fonts/PressStart2P-vaV7.otf");
+}
+
+@font-face {
+    font-family: neon-glow;
+    src: url("../fonts/NeonGlow-8VLz.ttf");
+}

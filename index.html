@@ -8,34 +8,35 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
     </head>
     <body>
-        <div class="header_links">
-            <a class="name_logo" href="/">Kendrick Yeung</a>
-            <a href="/Resume_Kendrick_Yeung.pdf">Resume</a>
-            <a href="https://github.com/yeungts">Github</a>
-            <a href="https://vsco.co/kendrick-yeung/gallery">Gallery</a>
-        </div>
-
-        <div id="about_me">
-            <h1>Who am I</h1>
-            <p class="about_paragraphs">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
-            <p class="about_paragraphs">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
-        </div>
-
-        <div id="projects">
-            <h1>Stuffs that I have done</h1>
-
-            <div>
-                <h2><a href="/medontime.html">MedOnTime</a></h2>
-                <p>MedOnTime is a patient information terminal (caretaker) and a medication reminder app (patient) designed to help people to take their medicine on time and keep track of their medication cosumption. </p>
-                <a href="https://github.com/yeungts/MedOnTime_WebApp" >Github Repo (Web App)</a>
-                <a href="https://github.com/yeungts/MedOnTime_API">Github Repo (API)</a>
+        <div class="wrapper">
+            <div class="header_links">
+                <div class="name_logo">
+                    <a href="/">Kendrick Yeung</a>
+                </div>
+                    
+                <div class="other_links">
+                    <a id="vol_changer" href="#" onClick="changeVolume()" ></a>
+                    <a href="aboutme.html">About_Me</a>
+                    <a href="/Resume_Kendrick_Yeung.pdf" target="_blank">Resume</a>
+                    <a href="https://github.com/yeungts" target="_blank">Github</a>
+                    <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
+                </div>
             </div>
 
-            <div>
-                <h2>Food ordering client</h2>
-                <p>This is a Universal Windows Platform restaurant ordering app that can be tailored for any restaurant with normal operations</p>
-                <a href="https://github.com/yeungts/FoodOrderingClient">Github Repo</a>
+            
+            <div id="main_welcome" class="flexitem">
+                <p>Hey! It's Kendrick here!</p>
+                <p>Thanks for dropping by!</p>
+                <p>Enjoy your stay!</p>
             </div>
+
+            <div class="flexitem">
+
+            </div>
+            <audio id="background_audio" hidden autoplay loop>
+                <source src="audio/background.ogg" type="audio/ogg">
+            </audio>
         </div>
     </body>
+    <script src="js/main.js"></script>
 </html>
