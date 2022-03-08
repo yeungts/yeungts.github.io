@@ -37,27 +37,12 @@ function getCookie(cname) {
 
 
 function changeVolume() {
-    switch (background_audio.volume) {
-        case 0:
-            background_audio.volume = 0.25;
-            vol_changer.innerHTML = "Vol(25%)";
-            break;
-        case 0.25:
-            background_audio.volume = 0.5;
-            vol_changer.innerHTML = "Vol(50%)";
-            break;
-        case 0.5:
-            background_audio.volume = 0.75;
-            vol_changer.innerHTML = "Vol(75%)";
-            break;
-        case 0.75:
-            background_audio.volume = 1;
-            vol_changer.innerHTML = "Vol(100%)";
-            break;
-        case 1:
-            background_audio.volume = 0;
-            vol_changer.innerHTML = "Vol(Muted)";
-            break;
+    if (background_audio.volume + 0.1 > 1) {
+        background_audio.volume = 0;
+        vol_changer.innerHTML = "Vol(Muted)";
+    } else {
+        background_audio.volume += 0.1;
+        vol_changer.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
     }
     document.cookie = "volume=" + background_audio.volume;
 }
