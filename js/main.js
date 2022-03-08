@@ -1,6 +1,6 @@
 // initialize
-var background_audio = document.getElementById("background_audio");
-var vol_changer = document.getElementById("vol_changer");
+var background_audio = document.getElementById("background-audio");
+var vol_changer = document.getElementById("vol-changer");
 
 
 if (background_audio != null) {

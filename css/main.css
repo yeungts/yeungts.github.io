@@ -47,7 +47,7 @@ div.wrapper {
   flex-basis: 100%;
 }
 
-div.header_links {
+div.header-links {
     display: flex;
     min-height: 200px;
     padding: 20px 30px 0px 30px;
@@ -58,12 +58,12 @@ div.header_links {
     margin-left: auto;
 }
 
-.name_logo {
+.name-logo {
     font-family: road-rage;
     font-size: 40px;
 }
 
-div#other_links {
+div#other-links {
     font-family: arcade;
     display: flex;
     column-gap: 1em;
@@ -73,13 +73,13 @@ div#other_links {
     height: fit-content;
 }
 
-#main_welcome {
+#main-welcome {
     font-family: connection;
     font-size: 3.5vw;
     word-spacing: 6px;
 }
 
-.content_title {
+.content-title {
     font-size: 50px;
     font-family: neon-glow;
     color: #e77e1b;
@@ -89,6 +89,7 @@ div#other_links {
 .center-content {
     max-width: 1000px;
     margin: 0 auto 200px;
+    padding: 0 10px;
 }
 
 .descriptions {
@@ -128,48 +129,55 @@ div#other_links {
 }
 
 @media screen and (max-width: 1220px) {
-
     
-div.header_links {
-    display: flex;
-    flex-direction: column;
-    min-height: fit-content;
-    padding: 20px 30px 0px 30px;
+    div.header-links {
+        display: flex;
+        flex-direction: column;
+        min-height: fit-content;
+        padding: 20px 30px 0px 30px;
+    }
+
+    .name-logo {
+        margin-right: auto;
+    }
+
+    .mobile-menu-wrapper {
+        display: flex;
+    }
+
+    .mobile-menu {
+        padding-top: 25px;
+        font-size: 30px;
+        display: block;
+    }
+        
+    div#other-links {
+        font-family: arcade;
+        display: none;
+        flex-direction: column;
+        row-gap: 1em;
+        padding-top: 35px;
+        font-size: 30px;
+        height: fit-content;
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    #main-welcome {
+        padding-top: 20vh;
+        font-size: 5vw;
+        word-spacing: 6px;
+    }
+
 }
 
-.name_logo {
-    font-family: road-rage;
-    font-size: 40px;
-    margin-right: auto;
-}
+@media screen and (max-width: 480px) {
+    .name-logo {
+        font-size: 30px;
+    }
 
-.mobile-menu-wrapper {
-    display: flex;
-}
-
-.mobile-menu {
-    padding-top: 25px;
-    font-size: 30px;
-    display: block;
-}
-    
-div#other_links {
-    font-family: arcade;
-    display: none;
-    flex-direction: column;
-    row-gap: 1em;
-    padding-top: 35px;
-    font-size: 30px;
-    height: fit-content;
-    margin-left: 0;
-    margin-right: auto;
-    text-align: left;
-}
-
-#main_welcome {
-    padding-top: 20vh;
-    font-size: 5vw;
-    word-spacing: 6px;
-}
-
+    .mobile-menu {
+        padding-top: 10px;
+    }
 }

@@ -10,9 +10,9 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="header_links">
+            <div class="header-links">
                 <div class="mobile-menu-wrapper">
-                    <div class="name_logo">
+                    <div class="name-logo">
                         <a href="javascript:void(0);" onClick="displayMainWelcome()">Kendrick Yeung</a>
                     </div>
                     <div class="mobile-menu">
@@ -21,30 +21,45 @@
                         </a>
                     </div>
                 </div>
-                <div id="other_links">
-                    <a id="vol_changer" href="javascript:void(0);" onClick="changeVolume()" ></a>
+                <div id="other-links">
+                    <a id="vol-changer" href="javascript:void(0);" onClick="changeVolume()" ></a>
                     <a href="javascript:void(0);" onclick="displayAboutMe()">About_Me</a>
-                    <a href="/Resume_Kendrick_Yeung.pdf" target="_blank">Resume</a>
+                    <a href="javascript:void(0);" onclick="displayResume()">Resume</a>
                     <a href="https://github.com/yeungts" target="_blank">Github</a>
                     <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
                     <a href="javascript:void(0);" onclick="displayCredits()">Credits</a>
                 </div>
             </div>
             
-            <div id="main_welcome" class="center-content flexitem">
+            <div id="main-welcome" class="center-content flexitem">
                 <p class="purple-triple-shadow">Hey! It's Kendrick here!</p>
                 <p class="purple-triple-shadow">Thanks for dropping by!</p>
                 <p class="purple-triple-shadow">Enjoy your stay!</p>
             </div>
 
             <div id="about-me" class="center-content flexitem">
-                <p class="content_title">Who am I?</h1>
+                <p class="content-title">Who am I?</h1>
                 <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
                 <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
             </div>
 
+            <div id="resume" class="center-content flexitem">
+                <p class="content-title">My Resume</h1>
+                <div>
+                    <iframe 
+                        id="resume-pdf"
+                        src="Resume_Kendrick_Yeung.pdf" 
+                        type="application/pdf"
+                        frameBorder="0"
+                        scrolling="auto"
+                        height="1105px"
+                        width="850px">
+                    </iframe>
+                </div>
+            </div>
+
             <div id="credits" class="center-content flexitem">
-                <p class="content_title">Resources Credits</h1>
+                <p class="content-title">Resources Credits</h1>
                 <p class="descriptions"><a href="https://www.youtube.com/watch?v=EPchcBkhRj0" target="_blank">Infinite Background - Augustolpq</a></p>
                 <p class="descriptions"><a href="https://www.youtube.com/watch?v=9Q9TwlME5fk" target="_blank">Running In The 80s - Magnavox </a></p>
                 <p class="descriptions"><a href="https://www.rennerflorian.de/wp/project/retrowave" target="_blank">Retrowave - Florian Renner</a></p>
@@ -54,7 +69,7 @@
 
             </div>
         </div>
-        <audio id="background_audio" hidden autoplay loop>
+        <audio id="background-audio" hidden autoplay loop>
             <source src="audio/background.ogg" type="audio/ogg">
         </audio>
     </body>
@@ -63,37 +78,54 @@
     <script>
         // hide other elements
         $(window).ready(() => {
-            $("#main_welcome").css("display", "block");
-            $("#about-me").css("display", "none");
-            $("#credits").css("display", "none");
+            displayMainWelcome();
         });
 
-        // prevent other_links doesnt hide when less than 1220 px,
+        // prevent other-links doesnt hide when less than 1220 px,
         // and doesnt show when more than 1220px after using the hamburger menu
         $(window).resize(() => {
-            $(window).width() > 1220 ? $("#other_links").css("display", "flex") : $("#other_links").css("display", "none");
+            $(window).width() > 1220 ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
+            resizeResumeIFrame();
         });
 
         function displayMainWelcome() {
+            $("#main-welcome").css("display", "block");
             $("#about-me").css("display", "none");
+            $("#resume").css("display", "none");
             $("#credits").css("display", "none");
-            $("#main_welcome").css("display", "block");
         }
 
         function displayAboutMe() {
-            $("#main_welcome").css("display", "none");
+            $("#main-welcome").css("display", "none");
             $("#about-me").css("display", "block");
+            $("#resume").css("display", "none");
             $("#credits").css("display", "none");
         }
 
-        function displayCredits() {
-            $("#main_welcome").css("display", "none");
+        function displayResume() {
+            $("#main-welcome").css("display", "none");
             $("#about-me").css("display", "none");
+            $("#resume").css("display", "block");
+            $("#credits").css("display", "none");
+            resizeResumeIFrame();
+        }
+
+        function displayCredits() {
+            $("#main-welcome").css("display", "none");
+            $("#about-me").css("display", "none");
+            $("#resume").css("display", "none");
             $("#credits").css("display", "block");
         }
 
         function displayMenu() {
-            $("#other_links").css("display") == "none" ? $("#other_links").css("display", "flex") : $("#other_links").css("display", "none");
+            $("#other-links").css("display") == "none" ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
+        }
+
+        function resizeResumeIFrame() {
+            if ($(window).width() < 900) {
+                $("#resume-pdf").attr("width", ($(window).width() - 30) + "px");
+                $("#resume-pdf").attr("height", ($(window).width() - 30) * 1.3 + "px");
+            }
         }
     </script>
 </html>
