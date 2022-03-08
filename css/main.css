@@ -12,7 +12,6 @@ body#index_body {
 
 body {
     background-color: #200D3A;
-    color: #CE5E82;
     margin: 0;
     background-image: url("../img/index_background.gif");
     background-repeat: no-repeat;
@@ -27,7 +26,7 @@ body a {
 
 body a:hover {
     text-decoration: none;
-    color: #CE5E82;
+    color: #f0d3dc;
     text-shadow: 1.5px 1.5px #FF0000;
 }
 
@@ -58,16 +57,6 @@ div.header_links {
     padding: 20px 30px 0px 30px;
 }
 
-div.header_links a {
-    text-decoration: none;
-    color: #ec8a09;
-    text-shadow: 1.5px 1.5px #6200ff;
-}
-
-div.header_links a:hover {
-    color: #CE5E82;
-    text-shadow: 1.5px 1.5px #FF0000;
-}
 
 .name_logo {
     font-family: road-rage;
@@ -93,9 +82,7 @@ div.other_links {
 
 #main_welcome {
     font-family: connection;
-    color: #e77e1b;
-    text-shadow: 0px 0px 15px rgba(233, 247, 33, 0.664);
-    font-size: 48px;
+    font-size: 3vw;
     word-spacing: 6px;
 }
 
@@ -113,17 +100,28 @@ div.about_me {
 
 .descriptions {
     font-family: arcade;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+#enter-btn {
+    font-size: 5vw;
+    color: #ec8a09;
+    text-shadow: 3.5px 3.5px #6200ff;
+}
+
+#enter-btn:hover {
+    text-decoration: none;
+    color: #f0d3dc;
+    text-shadow: 3.5px 3.5px #FF0000;
 }
 
 #index_body .descriptions {
-    color: #ffffff;
-    font-family: arcade;
     font-size: 2vw;
 }
 
-.triple-shadow {
+.purple-triple-shadow {
+    color: #ffffff;
     text-shadow: 1.5px 1.5px #df00c1, 3px 3px #91009e, 4.5px 4.5px #2b0063;
 }
 
