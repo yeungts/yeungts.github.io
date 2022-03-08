@@ -1,9 +1,14 @@
-body#index_body {
-    background-color: #200D3A;
-    margin: 0;
+div.wrapper {
     background-image: url("../img/landing_background.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    min-height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #index_body .name_logo {
