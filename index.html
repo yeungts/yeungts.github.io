@@ -15,10 +15,10 @@
             
             <div class="flexitem flex-column">
                 <div id="main_welcome">
-                    <a id="enter-btn" href="main.html" style="font-size: 5vw;">Enter!</a>
+                    <a id="enter-btn" href="main.html">Enter!</a>
                 </div>
                 <div>
-                    <p class="descriptions triple-shadow">Be aware of background audio!</p>
+                    <p class="descriptions purple-triple-shadow">Be aware of background audio!</p>
                 </div>
             </div>
         </div>
@@ -29,13 +29,22 @@
         var isMouseOnEnter = false;
         setInterval(function() {
             if (!isMouseOnEnter) {
-                $("#enter-btn").fadeOut(500).fadeIn(500);
+                //$("#enter-btn").fadeOut(500).fadeIn(500);
+                $("#enter-btn").css("opacity") == 1 ? $("#enter-btn").css("opacity", "0") : $("#enter-btn").css("opacity", "1");
+            } else {
+                $("#enter-btn").css("opacity", "1");
             }
         }, 1000);
 
         $(document).ready(function(){
             $(document).mousemove(function(){
-                $("#main_welcome:hover").length != 0 ? isMouseOnEnter = true : isMouseOnEnter = false;
+                if ($("#enter-btn:hover").length != 0) { 
+                    isMouseOnEnter = true; 
+                    $("#enter-btn").css("opacity", "1");
+                } else { 
+                    isMouseOnEnter = false; 
+                }
+
             })
         });
         </script>
