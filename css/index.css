@@ -7,7 +7,7 @@ body#index_body {
 }
 
 #index_body .name_logo {
-    padding-top: 20vh;
+    padding-top: 10vh;
     color: #ff9900;
     text-shadow: 4px 4px #8d1af8;
     font-size: 3.5vw;
@@ -27,10 +27,14 @@ body#index_body {
     font-size: 2vw;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1650px) {
     .name_logo {
         margin: 0 auto;
         font-size: 5vw !important;
+    }
+
+    #index_body .name_logo {
+        padding-top: 2vh;
     }
 
     #main_welcome {
@@ -39,6 +43,45 @@ body#index_body {
         word-spacing: 6px;
     }
 
+    #enter-btn {
+        font-size: 5vw;
+    }
+    
+    #index_body .descriptions {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .name_logo {
+        margin: 0 auto;
+        font-size: 5vw !important;
+    }
+    
+    #index_body .name_logo {
+        padding-top: 10vh;
+    }
+
+    #main_welcome {
+        padding-top: 10vh;
+        font-size: 5vw;
+        word-spacing: 6px;
+    }
+
+    #enter-btn {
+        font-size: 6.5vw;
+    }
+    
+    #index_body .descriptions {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #index_body .name_logo {
+        padding-top: 20vh;
+    }
+    
     #enter-btn {
         font-size: 8vw;
     }
