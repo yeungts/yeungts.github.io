@@ -8,15 +8,17 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
     </head>
     <body id="index_body">
-        <div class="wrapper">
+        <div class="wrapper flex-column">
             <div class="name_logo flexitem">
                     <h1>Kendrick Yeung</h1>
             </div>
             
-            <div class="flexitem">
+            <div class="flexitem flex-column">
                 <div id="main_welcome">
-                    <a id="enter_btn_blink" href="main.html" style="font-size: 60px;">Enter!</a>
-                    <!-- <a id="enter_btn_static" href="main.html" style="font-size: 60px; display: none;">Enter!</a> -->
+                    <a id="enter-btn" href="main.html" style="font-size: 5vw;">Enter!</a>
+                </div>
+                <div>
+                    <p class="descriptions triple-shadow">Be aware of background audio!</p>
                 </div>
             </div>
         </div>
@@ -27,7 +29,7 @@
         var isMouseOnEnter = false;
         setInterval(function() {
             if (!isMouseOnEnter) {
-                $("#enter_btn_blink").fadeOut(500).fadeIn(500);
+                $("#enter-btn").fadeOut(500).fadeIn(500);
             }
         }, 1000);
 

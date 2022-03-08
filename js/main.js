@@ -5,9 +5,9 @@ var vol_changer = document.getElementById("vol_changer");
 
 if (background_audio != null) {
     if (getCookie("volume") == "") {
-        background_audio.volume = 0.25;
-        vol_changer.innerHTML = "Vol(25%)";
-        document.cookie = "volume=0.25";
+        background_audio.volume = 0.1;
+        vol_changer.innerHTML = "Vol(10%)";
+        document.cookie = "volume=0.1";
     } else {
         var volume = parseFloat(getCookie("volume"));
         console.log(volume);
