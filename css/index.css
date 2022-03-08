@@ -7,6 +7,7 @@ body#index_body {
 }
 
 #index_body .name_logo {
+    padding-top: 20vh;
     color: #ff9900;
     text-shadow: 4px 4px #8d1af8;
     font-size: 3.5vw;
@@ -24,4 +25,25 @@ body#index_body {
 
 #index_body .descriptions {
     font-size: 2vw;
+}
+
+@media screen and (max-width: 1220px) {
+    .name_logo {
+        margin: 0 auto;
+        font-size: 5vw !important;
+    }
+
+    #main_welcome {
+        padding-top: 10vh;
+        font-size: 5vw;
+        word-spacing: 6px;
+    }
+
+    #enter-btn {
+        font-size: 8vw;
+    }
+    
+    #index_body .descriptions {
+        font-size: 5vw;
+    }
 }
