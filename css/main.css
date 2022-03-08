@@ -73,6 +73,11 @@ div#other-links {
     height: fit-content;
 }
 
+#vol-display:hover {
+    color: #ff9939;
+    text-shadow: 1.5px 1.5px #6200ff;
+}
+
 #main-welcome {
     font-family: connection;
     font-size: 3.5vw;
@@ -103,9 +108,13 @@ div#other-links {
     text-shadow: 1.5px 1.5px #df00c1, 3px 3px #91009e, 4.5px 4.5px #2b0063;
 }
 
-#projects p {
-    font-family: connection;
-    word-spacing: 4px;
+.projects-container {
+    display: flex;
+}
+
+.project-card {
+    text-align: left;
+    color: #ffffff;
 }
 
 @font-face {

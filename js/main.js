@@ -1,23 +1,25 @@
 // initialize
 var background_audio = document.getElementById("background-audio");
-var vol_changer = document.getElementById("vol-changer");
+var vol_display = document.getElementById("vol-display");
 
 
 if (background_audio != null) {
     background_audio.volume = 0.05;
-    vol_changer.innerHTML = "Vol(5%)";
+    vol_display.innerHTML = "Vol(5%)";
 }
 
+function increaseVolume() {
+    background_audio.volume + 0.05 > 1 ? background_audio.volume = 1 : background_audio.volume += 0.05;
+    vol_display.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
+}
 
-
-
-function changeVolume() {
-    if (background_audio.volume + 0.05 > 1) {
+function reduceVolume() {
+    if (0 > background_audio.volume - 0.05) {
         background_audio.volume = 0;
-        vol_changer.innerHTML = "Vol(Muted)";
     } else {
-        background_audio.volume += 0.05;
-        vol_changer.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
+        background_audio.volume -= 0.05;
     }
+
+    background_audio.volume == 0 ? vol_display.innerHTML = "Vol(MUTED)" : vol_display.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
 }
 

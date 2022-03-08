@@ -22,7 +22,11 @@
                     </div>
                 </div>
                 <div id="other-links">
-                    <a id="vol-changer" href="javascript:void(0);" onClick="changeVolume()" ></a>
+                    <div>
+                        <a href="javascript:void(0);" onclick="reduceVolume()">-</a>
+                        <a id="vol-display"></a>
+                        <a href="javascript:void(0);" onclick="increaseVolume()">+</a>
+                    </div>
                     <a href="javascript:void(0);" onclick="displayAboutMe()">About_Me</a>
                     <a href="javascript:void(0);" onclick="displayResume()">Resume</a>
                     <a href="https://github.com/yeungts" target="_blank">Github</a>
@@ -38,9 +42,27 @@
             </div>
 
             <div id="about-me" class="center-content flexitem">
-                <p class="content-title">Who am I?</h1>
-                <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
-                <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
+                <div>
+                    <p class="content-title">Who am I?</h1>
+                    <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
+                    <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
+                </div>
+                <div>
+                    <p class="content-title">Featured Projects</p>
+                    <div class="projects-container">
+                        <div class="project-card flexitem">
+                            <div class="project-name">
+                                <p>MedOnTime</p>
+                            </div>
+                            <div class="project-summary">
+                                <p>MedOnTime is a patient information terminal (caretaker) and a medication reminder app (patient) designed to help people to take their medicine on time and keep track of their medication cosumption.</p>
+                            </div>
+                            <div class="project-tech">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="resume" class="center-content flexitem">
