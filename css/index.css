@@ -1,0 +1,27 @@
+body#index_body {
+    background-color: #200D3A;
+    margin: 0;
+    background-image: url("../img/landing_background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#index_body .name_logo {
+    color: #ff9900;
+    text-shadow: 4px 4px #8d1af8;
+    font-size: 3.5vw;
+}
+
+#enter-btn {
+    font-size: 5vw;
+    text-shadow: 3.5px 3.5px #6200ff;
+}
+
+#enter-btn:hover {
+    text-decoration: none;
+    text-shadow: 3.5px 3.5px #FF0000;
+}
+
+#index_body .descriptions {
+    font-size: 2vw;
+}

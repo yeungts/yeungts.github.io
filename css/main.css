@@ -2,25 +2,14 @@ html, body {
     height: 100%;
 }
 
-body#index_body {
-    background-color: #200D3A;
-    margin: 0;
-    background-image: url("../img/landing_background.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 body {
     background-color: #200D3A;
     margin: 0;
-    background-image: url("../img/index_background.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body a {
     text-decoration: none;
-    color: #ec8a09;
+    color: #ff9939;
     text-shadow: 1.5px 1.5px #6200ff;
 }
 
@@ -31,10 +20,16 @@ body a:hover {
 }
 
 div.wrapper {
+    background-image: url("../img/index_background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     z-index: 1;
-    height: 100%;
+    min-height: 100%;
     text-align: center;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-column {
@@ -57,19 +52,17 @@ div.header_links {
     padding: 20px 30px 0px 30px;
 }
 
+.mobile-menu {
+    display: none;
+    margin-left: auto;
+}
 
 .name_logo {
     font-family: road-rage;
     font-size: 40px;
 }
 
-#index_body .name_logo {
-    color: #8d1af8;
-    text-shadow: 4px 4px #ff9900;
-    font-size: 3.5vw;
-}
-
-div.other_links {
+div#other_links {
     font-family: arcade;
     display: flex;
     column-gap: 1em;
@@ -79,10 +72,9 @@ div.other_links {
     height: fit-content;
 }
 
-
 #main_welcome {
     font-family: connection;
-    font-size: 3vw;
+    font-size: 3.5vw;
     word-spacing: 6px;
 }
 
@@ -93,31 +85,15 @@ div.other_links {
     text-shadow: 0px 0px 15px rgba(233, 247, 33, 0.664);
 }
 
-div.about_me {
+.center-content {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 200px;
 }
 
 .descriptions {
     font-family: arcade;
     font-size: 24px;
     line-height: 28px;
-}
-
-#enter-btn {
-    font-size: 5vw;
-    color: #ec8a09;
-    text-shadow: 3.5px 3.5px #6200ff;
-}
-
-#enter-btn:hover {
-    text-decoration: none;
-    color: #f0d3dc;
-    text-shadow: 3.5px 3.5px #FF0000;
-}
-
-#index_body .descriptions {
-    font-size: 2vw;
 }
 
 .purple-triple-shadow {
@@ -148,4 +124,51 @@ div.about_me {
 @font-face {
     font-family: neon-glow;
     src: url("../fonts/NeonGlow-8VLz.ttf");
+}
+
+@media screen and (max-width: 1220px) {
+
+    
+div.header_links {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+    padding: 20px 30px 0px 30px;
+}
+
+.name_logo {
+    font-family: road-rage;
+    font-size: 40px;
+    margin-right: auto;
+}
+
+.mobile-menu-wrapper {
+    display: flex;
+}
+
+.mobile-menu {
+    padding-top: 25px;
+    font-size: 30px;
+    display: block;
+}
+    
+div#other_links {
+    font-family: arcade;
+    display: none;
+    flex-direction: column;
+    row-gap: 1em;
+    padding-top: 35px;
+    font-size: 30px;
+    height: fit-content;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+#main_welcome {
+    padding-top: 20vh;
+    font-size: 5vw;
+    word-spacing: 6px;
+}
+
 }

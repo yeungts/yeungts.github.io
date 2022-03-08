@@ -6,38 +6,95 @@
         <meta charset="UTF-8" />
         <meta name="description" content="Fresh grad looking for jobs ty" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="wrapper flex-column">
+        <div class="wrapper">
             <div class="header_links">
-                <div class="name_logo">
-                    <a href="#">Kendrick Yeung</a>
+                <div class="mobile-menu-wrapper">
+                    <div class="name_logo">
+                        <a href="javascript:void(0);" onClick="displayMainWelcome()">Kendrick Yeung</a>
+                    </div>
+                    <div class="mobile-menu">
+                        <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
                 </div>
-                    
-                <div class="other_links">
-                    <a id="vol_changer" href="#" onClick="changeVolume()" ></a>
-                    <a href="aboutme.html">About_Me</a>
+                <div id="other_links">
+                    <a id="vol_changer" href="javascript:void(0);" onClick="changeVolume()" ></a>
+                    <a href="javascript:void(0);" onclick="displayAboutMe()">About_Me</a>
                     <a href="/Resume_Kendrick_Yeung.pdf" target="_blank">Resume</a>
                     <a href="https://github.com/yeungts" target="_blank">Github</a>
                     <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
+                    <a href="javascript:void(0);" onclick="displayCredits()">Credits</a>
                 </div>
             </div>
-
             
-            <div id="main_welcome" class="flexitem">
+            <div id="main_welcome" class="center-content flexitem">
                 <p class="purple-triple-shadow">Hey! It's Kendrick here!</p>
                 <p class="purple-triple-shadow">Thanks for dropping by!</p>
                 <p class="purple-triple-shadow">Enjoy your stay!</p>
             </div>
 
+            <div id="about-me" class="center-content flexitem">
+                <p class="content_title">Who am I?</h1>
+                <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
+                <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
+            </div>
+
+            <div id="credits" class="center-content flexitem">
+                <p class="content_title">Credits</h1>
+                <p class="descriptions purple-triple-shadow">Placeholder</p>
+            </div>
+
             <div class="flexitem">
 
             </div>
-            <audio id="background_audio" hidden autoplay loop>
-                <source src="audio/background.ogg" type="audio/ogg">
-            </audio>
         </div>
+        <audio id="background_audio" hidden autoplay loop>
+            <source src="audio/background.ogg" type="audio/ogg">
+        </audio>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // hide other elements
+        $(window).ready(() => {
+            $("#main_welcome").css("display", "block");
+            $("#about-me").css("display", "none");
+            $("#credits").css("display", "none");
+        });
+
+        // prevent other_links doesnt hide when less than 1220 px,
+        // and doesnt show when more than 1220px after using the hamburger menu
+        $(window).resize(() => {
+            $(window).width() > 1220 ? $("#other_links").css("display", "flex") : $("#other_links").css("display", "none");
+        });
+
+        function displayMainWelcome() {
+            $("#about-me").css("display", "none");
+            $("#credits").css("display", "none");
+            $("#main_welcome").css("display", "block");
+        }
+
+        function displayAboutMe() {
+            $("#main_welcome").fadeOut(500);
+            $("#credits").fadeOut(500);
+            $("#main_welcome").css("display", "none");
+            $("#about-me").css("display", "block");
+            $("#credits").css("display", "none");
+            $("#about-me").fadeIn(500);
+        }
+
+        function displayCredits() {
+            $("#main_welcome").css("display", "none");
+            $("#about-me").css("display", "none");
+            $("#credits").css("display", "block");
+        }
+
+        function displayMenu() {
+            $("#other_links").css("display") == "none" ? $("#other_links").css("display", "flex") : $("#other_links").css("display", "none");
+        }
+    </script>
 </html>
