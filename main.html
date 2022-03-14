@@ -1,60 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Hello it's Kendrick</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="/css/main.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="header-links">
-                <div class="mobile-menu-wrapper">
-                    <div class="name-logo">
-                        <a href="javascript:void(0);" onClick="displayMainWelcome()">Kendrick Yeung</a>
-                    </div>
-                    <div class="mobile-menu">
-                        <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-                <div id="other-links">
-                    <div>
-                        <a href="javascript:void(0);" onclick="reduceVolume()">-</a>
-                        <a id="vol-display"></a>
-                        <a href="javascript:void(0);" onclick="increaseVolume()">+</a>
-                    </div>
-                    <a href="javascript:void(0);" onclick="displayAboutMe()">About_Me</a>
-                    <a href="javascript:void(0);" onclick="displayResume()">Resume</a>
-                    <a href="https://github.com/yeungts" target="_blank">Github</a>
-                    <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
-                    <a href="javascript:void(0);" onclick="displayCredits()">Credits</a>
-                </div>
-            </div>
-            
-            <div id="main-welcome" class="center-content flexitem">
-                <p class="purple-triple-shadow">Hey! It's Kendrick here!</p>
-                <p class="purple-triple-shadow">Thanks for dropping by!</p>
-                <p class="purple-triple-shadow">Enjoy your stay!</p>
-            </div>
 
-            <div id="about-me" class="center-content flexitem">
-                <div>
-                    <p class="content-title">Who am I?</h1>
-                    <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network Engineering Program from Sheridan College, currently looking for any opportunities in both front-end and back-end development. </p>
-                    <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily about driving a slow car fast, but on a close course, of course), and photography.</p>
+<head>
+    <title>Hello it's Kendrick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header-links">
+            <div class="mobile-menu-wrapper">
+                <div class="name-logo">
+                    <a href="javascript:void(0);" onClick="displayMainWelcome()">Kendrick Yeung</a>
                 </div>
+                <div class="mobile-menu">
+                    <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="other-links">
                 <div>
-                    <p class="content-title">Featured Projects</p>
-                    <div class="projects-container">
-                        <div class="project-card flexitem">
+                    <a href="javascript:void(0);" onclick="reduceVolume()">-</a>
+                    <a id="vol-display"></a>
+                    <a href="javascript:void(0);" onclick="increaseVolume()">+</a>
+                </div>
+                <a href="javascript:void(0);" onclick="displayAboutMe()">About_Me</a>
+                <a href="javascript:void(0);" onclick="displayResume()">Resume</a>
+                <a href="https://github.com/yeungts" target="_blank">Github</a>
+                <a href="https://vsco.co/kendrick-yeung/gallery" target="_blank">Gallery</a>
+                <a href="javascript:void(0);" onclick="displayCredits()">Credits</a>
+            </div>
+        </div>
+
+        <div id="main-welcome" class="center-content flexitem">
+            <p class="purple-triple-shadow">Hey! It's Kendrick here!</p>
+            <p class="purple-triple-shadow">Thanks for dropping by!</p>
+            <p class="purple-triple-shadow">Enjoy your stay!</p>
+        </div>
+
+        <div id="about-me" class="center-content flexitem">
+            <div>
+                <p class="content-title">Who am I?</h1>
+                <p class="descriptions purple-triple-shadow">Recently graduated from the Software Development & Network
+                    Engineering Program from Sheridan College, currently looking for any opportunities in both front-end
+                    and back-end development. </p>
+                <p class="descriptions purple-triple-shadow">Interest wise, I am interested in car things (primarily
+                    about driving a slow car fast, but on a close course, of course), and photography.</p>
+            </div>
+            <div>
+                <p class="content-title">Featured Projects</p>
+                <div class="projects-container">
+                    <div class="project-card flexitem">
                         <div class="project-name flexitem">
-                            <a class="purple-triple-shadow" href="https://yeungts.github.io/weather_checker/" target="_blank">Weather Checker</a>
+                            <a class="purple-triple-shadow" href="https://notttt-discord.herokuapp.com/"
+                                target="_blank">NOT-Discord</a>
                         </div>
                         <div class="project-summary">
-                            <span>A web application that allows users to search the current weather and forecast by city.</span>
+                            <span>A online chatroom that does not require registration.</span>
+                        </div>
+                        <div class="project-tech flexitem">
+                            <div class="project-tech-frontend">HTML</div>
+                            <div class="project-tech-frontend">CSS</div>
+                            <div class="project-tech-frontend">JavaScript</div>
+                            <div class="project-tech-backend">Node.js</div>
+                            <div class="project-tech-backend">Express</div>
+                            <div class="project-tech-backend">Socket.io</div>
+                        </div>
+                        <div class="project-source flexitem">
+                            <a href="https://github.com/yeungts/not-discord" target="_blank"
+                                class="project-source-item">Github Repo</a>
+                        </div>
+                    </div>
+                    <div class="project-card flexitem">
+                        <div class="project-name flexitem">
+                            <a class="purple-triple-shadow" href="https://yeungts.github.io/weather_checker/"
+                                target="_blank">Weather Checker</a>
+                        </div>
+                        <div class="project-summary">
+                            <span>A web application that allows users to search the current weather and forecast by
+                                city.</span>
                         </div>
                         <div class="project-tech flexitem">
                             <div class="project-tech-frontend">React/Redux</div>
@@ -65,118 +93,126 @@
                             <div class="project-tech-backend">RESTful API</div>
                         </div>
                         <div class="project-source flexitem">
-                            <a href="https://github.com/yeungts/weather_checker" target="_blank" class="project-source-item">Github Repo</a>
+                            <a href="https://github.com/yeungts/weather_checker" target="_blank"
+                                class="project-source-item">Github Repo</a>
                         </div>
                     </div>
-                        <div class="project-card flexitem">
-                            <div class="project-name flexitem">
-                                <span class="purple-triple-shadow">MedOnTime</span>
-                            </div>
-                            <div class="project-summary">
-                                <span>MedOnTime is a patient information terminal (caretaker) and a medication reminder app (patient) designed to help people to take their medicine on time and keep track of their medication cosumption.</span>
-                            </div>
-                            <div class="project-tech flexitem">
-                                <div class="project-tech-frontend">HTML</div>
-                                <div class="project-tech-frontend">CSS</div>
-                                <div class="project-tech-frontend">JavaScript</div>
-                                <div class="project-tech-frontend">jQuery</div>
-                                <div class="project-tech-frontend">Razor Page</div>
-                                <div class="project-tech-backend">C#</div>
-                                <div class="project-tech-backend">ASP.NET</div>
-                                <div class="project-tech-backend">mongoDB</div>
-                                <div class="project-tech-backend">RESTful API</div>
-                            </div>
-                            <div class="project-source flexitem">
-                                <a href="https://github.com/yeungts/MedOnTime_WebApp" target="_blank" class="project-source-item">Github Repo (Web App)</a>
-                                <a href="https://github.com/yeungts/MedOnTime_API" target="_blank" class="project-source-item">Github Repo (API)</a>
-                            </div>
+                    <div class="project-card flexitem">
+                        <div class="project-name flexitem">
+                            <span class="purple-triple-shadow">MedOnTime</span>
                         </div>
-                        <div class="project-card flexitem">
-                            <div class="project-name flexitem">
-                                <span class="purple-triple-shadow">Food ordering client</span>
-                            </div>
-                            <div class="project-summary">
-                                <span>This is a Universal Windows Platform restaurant ordering app that can be tailored for any restaurant with normal operations.</span>
-                            </div>
-                            <div class="project-tech flexitem">
-                                <div class="project-tech-frontend">UWP</div>
-                                <div class="project-tech-frontend">XML</div>
-                                <div class="project-tech-backend">C#</div>
-                                <div class="project-tech-backend">ASP.NET</div>
-                                <div class="project-tech-backend">SQL</div>
-                            </div>
-                            <div class="project-source flexitem">
-                                <a href="https://github.com/yeungts/FoodOrderingClient" target="_blank" class="project-source-item">Github Repo</a>
-                            </div>
+                        <div class="project-summary">
+                            <span>MedOnTime is a patient information terminal (caretaker) and a medication reminder app
+                                (patient) designed to help people to take their medicine on time and keep track of their
+                                medication cosumption.</span>
                         </div>
-                        <div class="project-card flexitem">
-                            <div class="project-name flexitem">
-                                <span class="purple-triple-shadow">Character matrix game</span>
-                            </div>
-                            <div class="project-summary">
-                                <span>A Universal Windows Platform game written in C# that randomly generates an n-by-n matrix based on the user's input. Uses a custom algorithm that will search in the matrix for the string that the user has entered. C</span>
-                            </div>
-                            <div class="project-tech flexitem">
-                                <div class="project-tech-frontend">UWP</div>
-                                <div class="project-tech-frontend">XML</div>
-                                <div class="project-tech-backend">C#</div>
-                                <div class="project-tech-backend">ASP.NET</div>
-                            </div>
-                            <div class="project-source flexitem">
-                                <a href="https://github.com/yeungts/MatrixStringGuesser" target="_blank" class="project-source-item">Github Repo</a>
-                            </div>
+                        <div class="project-tech flexitem">
+                            <div class="project-tech-frontend">HTML</div>
+                            <div class="project-tech-frontend">CSS</div>
+                            <div class="project-tech-frontend">JavaScript</div>
+                            <div class="project-tech-frontend">jQuery</div>
+                            <div class="project-tech-frontend">Razor Page</div>
+                            <div class="project-tech-backend">C#</div>
+                            <div class="project-tech-backend">ASP.NET</div>
+                            <div class="project-tech-backend">mongoDB</div>
+                            <div class="project-tech-backend">RESTful API</div>
+                        </div>
+                        <div class="project-source flexitem">
+                            <a href="https://github.com/yeungts/MedOnTime_WebApp" target="_blank"
+                                class="project-source-item">Github Repo (Web App)</a>
+                            <a href="https://github.com/yeungts/MedOnTime_API" target="_blank"
+                                class="project-source-item">Github Repo (API)</a>
+                        </div>
+                    </div>
+                    <div class="project-card flexitem">
+                        <div class="project-name flexitem">
+                            <span class="purple-triple-shadow">Food ordering client</span>
+                        </div>
+                        <div class="project-summary">
+                            <span>This is a Universal Windows Platform restaurant ordering app that can be tailored for
+                                any restaurant with normal operations.</span>
+                        </div>
+                        <div class="project-tech flexitem">
+                            <div class="project-tech-frontend">UWP</div>
+                            <div class="project-tech-frontend">XML</div>
+                            <div class="project-tech-backend">C#</div>
+                            <div class="project-tech-backend">ASP.NET</div>
+                            <div class="project-tech-backend">SQL</div>
+                        </div>
+                        <div class="project-source flexitem">
+                            <a href="https://github.com/yeungts/FoodOrderingClient" target="_blank"
+                                class="project-source-item">Github Repo</a>
+                        </div>
+                    </div>
+                    <div class="project-card flexitem">
+                        <div class="project-name flexitem">
+                            <span class="purple-triple-shadow">Character matrix game</span>
+                        </div>
+                        <div class="project-summary">
+                            <span>A Universal Windows Platform game written in C# that randomly generates an n-by-n
+                                matrix based on the user's input. Uses a custom algorithm that will search in the matrix
+                                for the string that the user has entered. C</span>
+                        </div>
+                        <div class="project-tech flexitem">
+                            <div class="project-tech-frontend">UWP</div>
+                            <div class="project-tech-frontend">XML</div>
+                            <div class="project-tech-backend">C#</div>
+                            <div class="project-tech-backend">ASP.NET</div>
+                        </div>
+                        <div class="project-source flexitem">
+                            <a href="https://github.com/yeungts/MatrixStringGuesser" target="_blank"
+                                class="project-source-item">Github Repo</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="resume" class="center-content flexitem">
-                <p class="content-title">My Resume</h1>
-                <div>
-                    <iframe 
-                        id="resume-pdf"
-                        src="Resume_Kendrick_Yeung.pdf" 
-                        type="application/pdf"
-                        frameBorder="0"
-                        scrolling="auto"
-                        height="1105px"
-                        width="850px">
-                    </iframe>
-                </div>
-            </div>
-
-            <div id="credits" class="center-content flexitem">
-                <p class="content-title">Resources Credits</h1>
-                <p class="descriptions"><a href="https://www.youtube.com/watch?v=EPchcBkhRj0" target="_blank">Infinite Background - Augustolpq</a></p>
-                <p class="descriptions"><a href="https://www.youtube.com/watch?v=9Q9TwlME5fk" target="_blank">Running In The 80s - Magnavox </a></p>
-                <p class="descriptions"><a href="https://www.rennerflorian.de/wp/project/retrowave" target="_blank">Retrowave - Florian Renner</a></p>
-            </div>
-
-            <div class="flexitem">
-
+        <div id="resume" class="center-content flexitem">
+            <p class="content-title">My Resume</h1>
+            <div>
+                <iframe id="resume-pdf" src="Resume_Kendrick_Yeung.pdf" type="application/pdf" frameBorder="0"
+                    scrolling="auto" height="1105px" width="850px">
+                </iframe>
             </div>
         </div>
-        <audio id="background-audio" hidden loop>
-            <source src="audio/background.ogg" type="audio/ogg">
-        </audio>
-        <div class="footer">
-            Copyright © 2022 Kendrick Yeung
-        </div>
-    </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        // hide other elements
-        $(window).ready(() => {
-            displayMainWelcome();
-            background_audio.play();
-        });
 
-        // prevent other-links doesnt hide when less than 1220 px,
-        // and doesnt show when more than 1220px after using the hamburger menu
-        $(window).resize(() => {
-            $(window).width() > 1220 ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
-            resizeResumeIFrame();
-        });
-    </script>
+        <div id="credits" class="center-content flexitem">
+            <p class="content-title">Resources Credits</h1>
+            <p class="descriptions"><a href="https://www.youtube.com/watch?v=EPchcBkhRj0" target="_blank">Infinite
+                    Background - Augustolpq</a></p>
+            <p class="descriptions"><a href="https://www.youtube.com/watch?v=9Q9TwlME5fk" target="_blank">Running In The
+                    80s - Magnavox </a></p>
+            <p class="descriptions"><a href="https://www.rennerflorian.de/wp/project/retrowave"
+                    target="_blank">Retrowave - Florian Renner</a></p>
+        </div>
+
+        <div class="flexitem">
+
+        </div>
+    </div>
+    <audio id="background-audio" hidden loop>
+        <source src="audio/background.ogg" type="audio/ogg">
+    </audio>
+    <div class="footer">
+        Copyright © 2022 Kendrick Yeung
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // hide other elements
+    $(window).ready(() => {
+        displayMainWelcome();
+        background_audio.play();
+    });
+
+    // prevent other-links doesnt hide when less than 1220 px,
+    // and doesnt show when more than 1220px after using the hamburger menu
+    $(window).resize(() => {
+        $(window).width() > 1220 ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
+        resizeResumeIFrame();
+    });
+</script>
+
 </html>
