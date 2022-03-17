@@ -4,8 +4,8 @@ var vol_display = document.getElementById("vol-display");
 
 
 if (background_audio != null) {
-    background_audio.volume = 0.05;
-    vol_display.innerHTML = "Vol(5%)";
+    background_audio.volume = 0;
+    vol_display.innerHTML = "Vol(MUTED)";
 }
 
 function increaseVolume() {
