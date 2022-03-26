@@ -3,6 +3,21 @@ var background_audio = document.getElementById("background-audio");
 var vol_display = document.getElementById("vol-display");
 
 
+// hide other elements
+$(window).ready(() => {
+    $(".header-links").css("width", $(window).width() - 60);
+    background_audio.play();
+});
+
+// prevent other-links doesnt hide when less than 1220 px,
+// and doesnt show when more than 1220px after using the hamburger menu
+$(window).resize(() => {
+    $(window).width() > 1220 ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
+    $(".header-links").css("width", $(window).width() - 60);
+    resizeResumeIFrame();
+});
+
+
 if (background_audio != null) {
     background_audio.volume = 0;
     vol_display.innerHTML = "Vol(MUTED)";
@@ -10,7 +25,7 @@ if (background_audio != null) {
 
 function increaseVolume() {
     background_audio.volume + 0.05 > 1 ? background_audio.volume = 1 : background_audio.volume += 0.05;
-    vol_display.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
+    vol_display.innerHTML = "Vol(" + (background_audio.volume * 100).toFixed(0) + "%)";
 }
 
 function reduceVolume() {
@@ -20,36 +35,7 @@ function reduceVolume() {
         background_audio.volume -= 0.05;
     }
 
-    background_audio.volume == 0 ? vol_display.innerHTML = "Vol(MUTED)" : vol_display.innerHTML = "Vol(" + (background_audio.volume*100).toFixed(0) + "%)";
-}
-
-function displayMainWelcome() {
-    $("#main-welcome").css("display", "block");
-    $("#about-me").css("display", "none");
-    $("#resume").css("display", "none");
-    $("#credits").css("display", "none");
-}
-
-function displayAboutMe() {
-    $("#main-welcome").css("display", "none");
-    $("#about-me").css("display", "block");
-    $("#resume").css("display", "none");
-    $("#credits").css("display", "none");
-}
-
-function displayResume() {
-    $("#main-welcome").css("display", "none");
-    $("#about-me").css("display", "none");
-    $("#resume").css("display", "block");
-    $("#credits").css("display", "none");
-    resizeResumeIFrame();
-}
-
-function displayCredits() {
-    $("#main-welcome").css("display", "none");
-    $("#about-me").css("display", "none");
-    $("#resume").css("display", "none");
-    $("#credits").css("display", "block");
+    background_audio.volume == 0 ? vol_display.innerHTML = "Vol(MUTED)" : vol_display.innerHTML = "Vol(" + (background_audio.volume * 100).toFixed(0) + "%)";
 }
 
 function displayMenu() {
@@ -63,3 +49,13 @@ function resizeResumeIFrame() {
     }
 }
 
+// smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
