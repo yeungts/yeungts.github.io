@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    background-color: #200D3A;
+    background-color: #2f2b35;
     margin: 0;
 }
 
@@ -20,11 +20,6 @@ body a:hover {
 }
 
 div.wrapper {
-    background-image: url("../img/index_background.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     z-index: 1;
     min-height: 100%;
     text-align: center;
@@ -104,11 +99,17 @@ div#other-links {
     font-family: arcade;
     font-size: 24px;
     line-height: 28px;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .purple-triple-shadow {
     color: #ffffff;
     text-shadow: 1.5px 1.5px #df00c1, 3px 3px #91009e, 4.5px 4.5px #2b0063;
+}
+
+#about-me {
+    padding-top: 10vh;
 }
 
 .projects-container {

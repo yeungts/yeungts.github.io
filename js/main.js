@@ -1,12 +1,7 @@
 // initialize
-var background_audio = document.getElementById("background-audio");
-var vol_display = document.getElementById("vol-display");
-
-
 // hide other elements
 $(window).ready(() => {
     $(".header-links").css("width", $(window).width() - 60);
-    background_audio.play();
 });
 
 // prevent other-links doesnt hide when less than 1220 px,
@@ -18,25 +13,6 @@ $(window).resize(() => {
 });
 
 
-if (background_audio != null) {
-    background_audio.volume = 0;
-    vol_display.innerHTML = "Vol(MUTED)";
-}
-
-function increaseVolume() {
-    background_audio.volume + 0.05 > 1 ? background_audio.volume = 1 : background_audio.volume += 0.05;
-    vol_display.innerHTML = "Vol(" + (background_audio.volume * 100).toFixed(0) + "%)";
-}
-
-function reduceVolume() {
-    if (0 > background_audio.volume - 0.05) {
-        background_audio.volume = 0;
-    } else {
-        background_audio.volume -= 0.05;
-    }
-
-    background_audio.volume == 0 ? vol_display.innerHTML = "Vol(MUTED)" : vol_display.innerHTML = "Vol(" + (background_audio.volume * 100).toFixed(0) + "%)";
-}
 
 function displayMenu() {
     $("#other-links").css("display") == "none" ? $("#other-links").css("display", "flex") : $("#other-links").css("display", "none");
