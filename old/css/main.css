@@ -1,0 +1,287 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #200D3A;
+    margin: 0;
+}
+
+body a {
+    text-decoration: none;
+    color: #ff9939;
+    text-shadow: 1.5px 1.5px #6200ff;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: #f0d3dc;
+    text-shadow: 1.5px 1.5px #FF0000;
+}
+
+div.wrapper {
+    background-image: url("../img/index_background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 1;
+    min-height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexitem {
+    flex-basis: 100%;
+}
+
+div.header-links {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #35353571;
+    padding: 20px 30px 10px 30px;
+}
+
+.mobile-menu {
+    display: none;
+    margin-left: auto;
+}
+
+.name-logo {
+    font-family: road-rage;
+    font-size: 40px;
+}
+
+div#other-links {
+    font-family: arcade;
+    display: flex;
+    column-gap: 1em;
+    margin-left: auto;
+    padding-top: 35px;
+    font-size: 30px;
+    height: fit-content;
+}
+
+.name-logo > span,  #vol-display {
+    color: #ff9939;
+    text-shadow: 1.5px 1.5px #6200ff;
+}
+
+#main-welcome {
+    margin-top: 25vh;
+    font-family: connection;
+    font-size: 3.5vw;
+    word-spacing: 6px;
+}
+
+.content-title {
+    font-size: 50px;
+    font-family: neon-glow;
+    color: #e77e1b;
+    text-shadow: 0px 0px 15px rgba(233, 247, 33, 0.664);
+}
+
+.center-content {
+    max-width: 1000px;
+    margin: 0 auto 200px;
+    padding: 0 10px;
+}
+
+.descriptions {
+    font-family: arcade;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.purple-triple-shadow {
+    color: #ffffff;
+    text-shadow: 1.5px 1.5px #df00c1, 3px 3px #91009e, 4.5px 4.5px #2b0063;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    column-gap: 5px;
+    text-align: left;
+    color: #ffffff;
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgba(85, 85, 85, 0.521);
+    box-shadow: 4px 6px 12px rgba(255, 201, 23, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    box-shadow: 10px 12px 25px rgba(255, 136, 0, 0.438);
+}
+
+.project-name {
+    font-family: arcade;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.project-summary {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.project-tech {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 3px;
+    column-gap: 5px;
+}
+
+.project-tech-frontend {
+    font-family: arcade;
+    color: #270238;
+    background-color: rgba(241, 111, 4, 0.849);
+    padding: 3px;
+    border-radius: 5px;
+    height: 12px;
+}
+
+.project-tech-backend {
+    font-family: arcade;
+    color: #ffffff;
+    background-color: rgba(167, 29, 185, 0.87);
+    padding: 3px;
+    border-radius: 5px;
+    height: 12px;
+}
+
+.project-source {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.project-source-item {
+    font-family: arcade;
+    color: #ff9939;
+    background-color: #6200ff;
+    padding: 3px;
+    border-radius: 5px;
+    height: 12px;
+}
+
+.project-source-item:hover {
+    font-family: arcade;
+    color: #f0d3dc;
+    background-color: #FF0000;
+    padding: 3px;
+    border-radius: 5px;
+    height: 12px;
+}
+
+@font-face {
+    font-family: road-rage;
+    src: url("../fonts/Roadrage-owgBd.otf");
+}
+
+@font-face {
+    font-family: connection;
+    src: url("../fonts/ConnectionIii-Rj3W.otf");
+}
+
+@font-face {
+    font-family: arcade;
+    src: url("../fonts/PlaymegamesReguler-2OOee.ttf");
+}
+
+@font-face {
+    font-family: neon-glow;
+    src: url("../fonts/NeonGlow-8VLz.ttf");
+}
+
+.footer {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    right: 10vw;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    text-align: right;
+}
+
+@media screen and (max-width: 1220px) {
+    div.header-links {
+        display: flex;
+        flex-direction: column;
+        min-height: fit-content;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .name-logo {
+        margin-right: auto;
+    }
+
+    .mobile-menu-wrapper {
+        display: flex;
+    }
+
+    .mobile-menu {
+        padding-top: 25px;
+        font-size: 30px;
+        display: block;
+    }
+        
+    div#other-links {
+        font-family: arcade;
+        display: none;
+        flex-direction: column;
+        row-gap: 1em;
+        padding-top: 35px;
+        font-size: 30px;
+        height: fit-content;
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    #main-welcome {
+        padding-top: 20vh;
+        font-size: 5vw;
+        word-spacing: 6px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .name-logo {
+        font-size: 30px;
+    }
+
+    .mobile-menu {
+        padding-top: 10px;
+    }
+
+    .footer {
+        right: 0;
+        text-align: center;
+    }
+}
